@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color:orange;
+
+		}
+		
+		#card{
+			width:300px;
+			height:300px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			border:1px solid black;
+			background-color: white; 
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>Happy birthday mom! Pick your card for your special day!</h1>
+		
+		<div id="card">
+			
+		</div>
+	</center>
+
+
+	<script type="text/javascript">
+		
+		var colors = ["red","orange","yellow","green","blue","indigo","violet"];
+		var images = ["url(https://images-na.ssl-images-amazon.com/images/I/71eBF5y5%2BwL._SX500_.jpg)","url(https://d2h1pu99sxkfvn.cloudfront.net/b0/2781797/275620688_iqHlxfKn3D/P0.jpg)","url(https://static.boredpanda.com/blog/wp-content/uploads/2017/10/funny-unexpected-greeting-cards-114-59dcd8bdc0b9f__700.jpg)","url(https://i.pinimg.com/originals/a0/b0/7d/a0b07d025edaf158466f207e93bd13a5.jpg)","url(https://img.buzzfeed.com/buzzfeed-static/static/2020-05/4/16/campaign_images/7602bd91cdd1/28-not-cheesy-cards-your-friends-and-family-will--2-7744-1588611120-2_dblbig.jpg?resize=1200:*)","url(https://www.greetingcardpoet.com/wp-content/uploads/2018/06/J2.png)","url(https://www.funkypigeon.com/blog/wp-content/uploads/2020/04/Dog-Years-Dead-Birthday-Card-1-250x356.jpg)"]
+		var card = document.getElementById("card")
+			card.addEventListener("click",function(){
+				var randomnumber = Math.floor(Math.random()*6.5)
+				card.style.backgroundImage=images[randomnumber]
+				console.log(randomnumber)
+	})
+
+		console.log(colors[6])
+	</script>
+</body>
+</html>

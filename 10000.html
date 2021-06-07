@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+
+    	/*this is the styling for the divs with the class of waffles*/
+    .waffles {
+        width: 100px;
+        height: 100px;
+        background-image: url(https://bakerish.com/wp-content/uploads/2020/05/CHOCOLATE-WAFFLES-3.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+    </style>
+</head>
+
+<body>
+<script type="text/javascript">
+
+    function makeWaffles(input) {
+        var waffle = document.createElement("div"); 
+
+        document.body.appendChild(waffle); 
+
+
+        waffle.classList.add('waffles');
+
+        waffle.innerText = input;
+
+
+    }
+
+for (var counter = 0; counter<176; counter=counter+5) {makeWaffles(counter);}
+
+
+  
+    </script>
+</body>
+
+</html>

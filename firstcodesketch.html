@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Penalty Kick Game</title>
+
+	<style type="text/css">
+
+		/*body{
+			background-color:slateblue;
+		}*/
+		body{
+			background-color:seagreen;
+		}
+#pitch{
+			/*position:relative;*/
+		/*	display: inline-block;*/
+			background-position: center;
+			width:800px;
+			height:500px;
+			margin:25px;
+			background-image:url(pkpitch.jpg);}
+#ball{
+
+	position:absolute;
+	
+	top:50.5%;
+	left:45.3%;
+	width:130px;
+	height:130px;
+	transition: 2s;
+	/*background-color:purple;*/
+	z-index: 1;
+	background-image:url(football.png);
+	background-size:cover; 
+	background-position: center;
+	/*transition:1s;*/
+}
+
+#invisible{
+		top:26.5%;
+		left:26.45%;
+		background-color:transparent;
+		position:absolute;
+		width:606px;
+		height:210px;
+}
+
+
+#scoreboard{
+
+	width:100px;
+	height:100px;
+	background-color:transparent;
+	color:white;
+	font-size:110px;
+
+
+
+}
+
+	</style>
+
+</head>
+<body>
+
+<center>
+<div id="pitch">
+	<div id=invisible
+	></div>
+	<div id="scoreboard"></div>
+<div id="ball"> </div>
+ </div>
+</center>
+<script type="text/javascript">
+	var pitch = document.getElementById("pitch");
+	var ball = document.getElementById("ball");
+	var invisible = document.getElementById("invisible")
+	var counter = 0
+	var sc = document.getElementById("scoreboard")
+
+
+	pitch.addEventListener("click",function(event){
+		console.log(event.clientX,event.clientY);
+
+	ball.style.left=event.clientX-65+"px";
+	ball.style.top=event.clientY-65+"px";
+
+	})
+	
+	invisible.addEventListener("click",function(){
+		counter=counter+1;
+console.log(counter)
+	
+
+		sc.innerText=counter})
+	
+	
+
+
+</script>
+
+</body>
+</html>
